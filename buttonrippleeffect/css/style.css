@@ -1,0 +1,47 @@
+body{
+    background-color: #000;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnripple{
+    background-color: rgb(64, 64, 206);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    padding: 15px 30px;
+    border: 0;
+
+    margin-right: 30px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+.btnripple:focus{
+    outline: 0;
+}
+.btnripple .circle{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%) scale(0);
+
+    animation: myani 0.5s ease-out;
+}
+
+@keyframes myani{
+    to{
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+}
